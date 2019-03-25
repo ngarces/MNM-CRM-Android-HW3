@@ -33,7 +33,9 @@ public class CreateCustomer {
         String phone=scanner.nextLine();
         System.out.println("Enter the Customer's address: ");
         String addy=scanner.nextLine();
-         Customer newCust= new Customer(last,first,email,phone,addy);
+        System.out.println("Enter the Customer's frequenctly ordered item : ");
+        String fo=scanner.nextLine();
+         Customer newCust= new Customer(last,first,email,phone,addy,fo);
          newCust.printCustomer();
     }
     

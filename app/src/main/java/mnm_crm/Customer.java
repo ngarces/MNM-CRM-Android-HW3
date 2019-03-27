@@ -1,5 +1,8 @@
 package mnm_crm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ngarces
@@ -7,19 +10,27 @@ package mnm_crm;
 public class Customer implements Person{
     private String lastName;
     private String firstName;
+    private String business;
     private String email;
     private String phoneNum;   //int can only hold a value so large, better represented as a string
     private String address;
-    private String frequentlyOrdered;
+    private List<String> frequentlyOrdered;
     
     //Constructor to set up new customer
-    public Customer(String last, String first, String em, String phone, String ad, String fo){
+    public Customer(String last, String first, String bus, String em, String phone, String ad){
         lastName = last;
         firstName = first;
+        business = bus;
         email = em;
         phoneNum = phone;
         address = ad;
-        frequentlyOrdered = fo;
+        frequentlyOrdered = new ArrayList<>();
+    }
+
+    public Customer(String last, String first)
+    {
+        lastName = last;
+        firstName = first;
     }
     
     //prints customer's info in one line
@@ -49,6 +60,8 @@ public class Customer implements Person{
         return address;
     }
 
-    public String getFrequentlyOrdered(){ return frequentlyOrdered; }
-    
+    public List<String> getFrequentlyOrdered(){ return frequentlyOrdered; }
+
+
+    //set up setters later
 }

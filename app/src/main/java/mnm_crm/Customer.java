@@ -2,7 +2,7 @@ package mnm_crm;
 
 /**
  *
- * @author ngarc
+ * @author ngarces
  */
 public class Customer implements Person{
     private String lastName;

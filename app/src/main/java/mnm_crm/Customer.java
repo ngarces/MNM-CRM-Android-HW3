@@ -16,7 +16,7 @@ public class Customer implements Person{
     private String address;
     private List<String> frequentlyOrdered;
     
-    //Constructor to set up new customer
+    //Constructors to set up new customer
     public Customer(String last, String first, String bus, String em, String phone, String ad){
         lastName = last;
         firstName = first;

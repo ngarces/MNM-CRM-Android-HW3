@@ -16,7 +16,7 @@ public class Employee implements Person{
     private String phoneNum; //int can only hold a value so large, better represented as a string
     private long id;
     
-    //Constructor to set up new customer
+    //Constructors to set up new customer
     public Employee(String last, String first, String em, String phone, long idNum){
         lastName = last;
         firstName = first;
@@ -24,12 +24,16 @@ public class Employee implements Person{
         phoneNum = phone;
         id = idNum;
     }
+
+    public Employee(String last, String first){
+        lastName = last;
+        firstName = first;
+    }
     
     //prints employee's info in one line
     public void printCustomer(){
         System.out.println(lastName + ", " + firstName + "\t" + email + "\t" + phoneNum + "\t" + id);
     }
-    
     
     //getter methods
     public String getLastName(){
@@ -47,9 +51,29 @@ public class Employee implements Person{
     public String getPhoneNum(){
         return phoneNum;
     }
-    
+
     public long getId(){
         return id;
     }
-    
+
+    //setter methods
+    public void setLastName(String last) {
+        lastName = last;
+    }
+
+    public void setFirstName(String first) {
+        firstName = first;
+    }
+
+    public void setEmail(String em) {
+        email = em;
+    }
+
+    public void setPhoneNum(String phone) {
+        phoneNum = phone;
+    }
+
+    public void setId(long idNum){
+        idNum = id;
+    }
 }

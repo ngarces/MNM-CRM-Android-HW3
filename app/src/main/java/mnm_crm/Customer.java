@@ -31,14 +31,14 @@ public class Customer implements Person{
     {
         lastName = last;
         firstName = first;
+        frequentlyOrdered = new ArrayList<>();
     }
     
     //prints customer's info in one line
     public void printCustomer(){
-        System.out.println(lastName + ", " + firstName + "\t" + email + "\t" + phoneNum + "\t" + address);
+        System.out.println(lastName + ", " + firstName + "\t" + business + "\t" + email + "\t" + phoneNum + "\t" + address);
     }
-    
-    
+
     //getter methods
     public String getLastName(){
         return lastName;
@@ -46,6 +46,10 @@ public class Customer implements Person{
     
     public String getFirstName(){
         return firstName;
+    }
+
+    public String getBusiness(){
+        return business;
     }
     
     public String getEmail(){
@@ -62,6 +66,28 @@ public class Customer implements Person{
 
     public List<String> getFrequentlyOrdered(){ return frequentlyOrdered; }
 
+    //setter methods
+    public void setLastName(String last){
+        lastName = last;
+    }
 
-    //set up setters later
+    public void setFirstName(String first){
+        firstName = first;
+    }
+
+    public void setBusiness(String bus) {
+        business = bus;
+    }
+
+    public void setEmail(String em){
+        email = em;
+    }
+
+    public void setPhoneNum(String phone){
+        phoneNum = phone;
+    }
+
+    public void setAddress(String ad){
+        address = ad;
+    }
 }
